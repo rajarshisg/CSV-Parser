@@ -1,0 +1,66 @@
+<!--Doctype is HTML5-->
+<!DOCTYPE html>
+<!--Begining of html tag-->
+<html lang="en">
+<!--Begining of header tag-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--stylesheet-->
+    <link rel="stylesheet" type="text/css" href="/css/file_style.css">
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/6f0f83005a.js" crossorigin="anonymous"></script>
+    <!--Title-->
+    <title>CSV Reader</title>
+</head>
+<!--End of header tag-->
+
+<!--Begining of body tag-->
+
+<body>
+    <!--Header-->
+    <div id="header"><a href="/">CSV Reader</a></div>
+
+    <!--Search Bar-->
+    <div id="search-box">
+        <input type="text" id="search" placeholder="Search for specific rows...">
+    </div>
+    <!--End of search bar-->
+
+    <!--Table-->
+    <table>
+        <!--Table Headers-->
+        <tr>
+            <% for(let header of headers) { %>
+                <th>
+                    <%= header %>
+                </th>
+                <% } %>
+        </tr>
+        <!--End of table headers-->
+
+        <!--Table datas-->
+        <% for(let i=0;i<datas.length;i++) { %>
+            <tr>
+                <% for(let j=0;j<headers.length;j++) { %>
+                    <td>
+                        <%= datas[i][headers[j]] %>
+                    </td>
+                    <% } %>
+            </tr>
+            <% } %>
+                <!--End of datas-->
+    </table>
+    <!--End of table-->
+
+    <!--Page numbers for pagination-->
+    <div id="page-numbers"></div>
+
+    <!--JS File-->
+    <script type="text/javascript" src="/js/file_script.js"></script>
+</body>
+<!--End of body tag-->
+
+</html>
+<!--End of html-->

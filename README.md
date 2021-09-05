@@ -35,9 +35,9 @@ Start the server
 
 ## Screenshots
 
-<img width="960" alt="1csv" src="https://user-images.githubusercontent.com/55212405/132139170-b4dfbe24-ca26-449c-afdf-089ea99db0b8.PNG">
+<img width="600" alt="1csv" src="https://user-images.githubusercontent.com/55212405/132139170-b4dfbe24-ca26-449c-afdf-089ea99db0b8.PNG">
 
-<img width="946" alt="2csv" src="https://user-images.githubusercontent.com/55212405/132139179-9aeb683e-4d4e-4b4b-a60e-5fabd0f13cb3.PNG">
+<img width="600" alt="2csv" src="https://user-images.githubusercontent.com/55212405/132139179-9aeb683e-4d4e-4b4b-a60e-5fabd0f13cb3.PNG">
 
 ## Authors
 

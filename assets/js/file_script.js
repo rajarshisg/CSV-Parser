@@ -1,21 +1,21 @@
 /* This function searches for rows based on the input being typed dynamically */
 function search() {
     document.getElementById('search').addEventListener('keyup', function () {
-        var val = document.getElementById('search').value; //value inside the form
+        var val = String(document.getElementById('search').value); //value inside the form
         let rows = document.querySelectorAll('table tr'); //selecting the rows
         for (let i = 1; i < rows.length; i++) {
             var matches = false;
             for (let j = 0; j < rows[i].cells.length; j++) {
                 //matching prefix
-                if (rows[i].cells[j].innerHTML.startsWith(val)) {
+                let currVal = String(rows[i].cells[j].innerText);
+                if (currVal.startsWith(val)) {
                     //if any column matches matches
                     rows[i].style.display = "";
                     matches = true;
-                    break;
                 }
             }
 
-            if (!matches) {
+            if (matches == false) {
                 //hiding the unmatched rows
                 rows[i].style.display = "none";
             }
@@ -33,7 +33,7 @@ function sortTableColumn(column, asc = true) {
     const ascDesc = asc ? 1 : -1; //whether we want to sort ascending or descending
     let rows = Array.from(document.querySelectorAll('table tr')); //all the rows
     let header = Array.from(document.querySelectorAll('table tr th')); //the headers
-    rows.shift(); //rows except header
+    let head = rows.shift(); //rows except header
     if (asc) {
         //if we are sorting in ascending order next time we need to sort in descending
         if (header[column].classList.contains('sort-asc')) {
